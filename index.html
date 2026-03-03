@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Social Butterfly Events | Athens, GA Event Planning & Coordination</title>
+  <meta name="description" content="Athens-based event planning and coordination for nonprofits, community events, businesses, and private celebrations. Guest-first, mission-forward, and beautifully organized." />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:title" content="Social Butterfly Events" />
+  <meta property="og:description" content="Athens event planning with a nonprofit heart. Guest-first, mission-forward, beautifully organized." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#111826;
+      --text:#eaf0ff;
+      --muted:#b7c1db;
+      --brand:#ff7bbd;
+      --brand2:#8be9ff;
+      --line:rgba(255,255,255,.12);
+      --shadow: 0 18px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 15% 5%, rgba(255,123,189,.18), transparent 60%),
+                  radial-gradient(1000px 600px at 85% 10%, rgba(139,233,255,.14), transparent 55%),
+                  var(--bg);
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px;}
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,20,.6);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: var(--shadow);
+    }
+    .navlinks{display:flex; gap:16px; flex-wrap:wrap; align-items:center}
+    .navlinks a{
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:12px;
+    }
+    .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:8px;
+      border:none;
+      padding:12px 14px;
+      border-radius:14px;
+      font-weight:800;
+      text-decoration:none;
+      cursor:pointer;
+      transition: transform .08s ease;
+      user-select:none;
+    }
+    .btn:active{transform: translateY(1px)}
+    .btn.primary{
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#0b0f14;
+      box-shadow: var(--shadow);
+    }
+    .btn.ghost{
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+    .hero{
+      padding: 56px 0 18px;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:26px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns: 1fr; padding-top:36px;}
+      .navlinks{display:none;}
+    }
+    .hcard{
+      background: rgba(17,24,38,.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+    h1{
+      margin: 0 0 12px;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height:1.05;
+      letter-spacing: -.8px;
+    }
+    .sub{
+      margin:0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 64ch;
+    }
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin: 18px 0 0;}
+    .pill{
+      font-size: 13px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding: 8px 10px;
+      border-radius: 999px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin: 18px 0 38px;
+    }
+    .card{
+      grid-column: span 4;
+      background: rgba(17,24,38,.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .card h3{margin:0 0 8px; font-size:18px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    @media (max-width: 900px){ .card{grid-column: span 12;} }
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:12px; margin: 18px 0 10px;
+    }
+    .section-title h2{margin:0; font-size: 24px; letter-spacing:-.3px}
+    .section-title p{margin:0; color:var(--muted); font-size:14px}
+    .two{
+      display:grid; grid-template-columns: 1fr 1fr; gap: 18px;
+    }
+    @media (max-width: 900px){ .two{grid-template-columns: 1fr;} }
+    ul.clean{margin:10px 0 0; padding:0; list-style:none}
+    ul.clean li{
+      padding:10px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size:14px;
+    }
+    ul.clean li strong{color:var(--text)}
+    .quote{
+      padding: 16px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size:14px;
+    }
+    form{display:grid; gap:12px; margin-top: 10px;}
+    label{font-size:13px; color:var(--muted)}
+    input, textarea, select{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .footer{
+      padding: 26px 0 36px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 24px;
+      font-size: 13px;
+    }
+    .kicker{
+      font-weight:800;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      letter-spacing:.4px;
+      text-transform:uppercase;
+      font-size:12px;
+    }
+    .mini{display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;}
+    .note{font-size:12px; color:var(--muted); margin-top:8px}
+    .small{font-size:12px; color:var(--muted)}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-size:15px; line-height:1;">Social Butterfly Events</div>
+          <div style="font-size:12px; color:var(--muted); font-weight:700;">Athens, GA • Nonprofit-first • Guest-first</div>
+        </div>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#support">How you can hire me</a>
+        <a href="#contact">Contact</a>
+        <a class="btn primary" href="#contact">Book a consult</a>
+      </nav>
+
+      <a class="btn primary" href="#contact" style="display:none;" id="mobileCta">Book a consult</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hcard">
+        <div class="kicker">Athens event planning with a nonprofit heart</div>
+        <h1>Big mission.<br/>Beautiful moment.<br/>Smooth execution.</h1>
+        <p class="sub">
+          I’m <strong>Davlin</strong>, the planner behind <strong>Social Butterfly Events</strong>. I help nonprofits, businesses,
+          and private clients in <strong>Athens, GA</strong> create events that feel welcoming, well-run, and genuinely meaningful —
+          without the stress spirals.
+        </p>
+
+        <div class="mini">
+          <a class="btn primary" href="#contact">Get started</a>
+          <a class="btn ghost" href="sms:+17248165268">Text me</a>
+        </div>
+
+        <div class="pillrow" aria-label="Highlights">
+          <div class="pill">Nonprofit fundraisers & donor events</div>
+          <div class="pill">Run of show + timelines</div>
+          <div class="pill">Vendor + volunteer coordination</div>
+          <div class="pill">Calm leadership (even when it’s chaos)</div>
+        </div>
+
+        <p class="note">
+          Text preferred: <a href="sms:+17248165268">724-816-5268</a> •
+          Email: <a href="mailto:socialbutterflyevent26@gmail.com">socialbutterflyevent26@gmail.com</a>
+        </p>
+
+        <!-- NEW: Availability note (playful + professional) -->
+        <div class="quote" style="margin-top:14px;">
+          <strong>Availability:</strong> Now booking <strong>Spring/Summer 2026</strong> — and yes, I can jump in for
+          <strong>urgent help this month</strong> if you’ve got a “we need a grown-up in the room” situation. 🙂
+        </div>
+      </div>
+
+      <div class="hcard" id="contact">
+        <h3 style="margin:0 0 10px;">Quick inquiry</h3>
+        <p style="margin:0 0 12px; color:var(--muted); font-size:14px;">
+          Drop the basics here — then hit send. This opens your email with everything pre-filled (easy + reliable).
+        </p>
+
+        <form id="leadForm">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" autocomplete="name" required />
+          </div>
+
+          <div class="two">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div>
+              <label for="phone">Phone (text preferred)</label>
+              <input id="phone" name="phone" type="tel" placeholder="###-###-####" />
+            </div>
+          </div>
+
+          <div class="two">
+            <div>
+              <label for="type">Event type</label>
+              <select id="type" name="event_type" required>
+                <option value="">Select one</option>
+                <option>Nonprofit fundraiser / gala</option>
+                <option>Donor / sponsor event</option>
+                <option>Community event</option>
+                <option>Corporate / business event</option>
+                <option>Wedding</option>
+                <option>Birthday / Milestone</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="date">Event date (or month)</label>
+              <input id="date" name="event_date" placeholder="e.g., May 2026" />
+            </div>
+          </div>
+
+          <div class="two">
+            <div>
+              <label for="location">Location</label>
+              <input id="location" name="location" placeholder="Athens (or nearby)"/>
+            </div>
+            <div>
+              <label for="guests">Guest count</label>
+              <input id="guests" name="guests" placeholder="Estimate is fine"/>
+            </div>
+          </div>
+
+          <div>
+            <label for="message">What do you need help with?</label>
+            <textarea id="message" name="message" placeholder="Small tasks? full planning? day-of coordination? volunteer roles? vendor comms? timeline + run-of-show?"></textarea>
+          </div>
+
+          <div class="mini">
+            <button class="btn primary" type="submit">Send inquiry</button>
+            <a class="btn ghost" href="sms:+17248165268">Or text me</a>
+          </div>
+
+          <div class="small">
+            Email goes to: <strong>socialbutterflyevent26@gmail.com</strong> • Text preferred: <strong>724-816-5268</strong>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>Private, business, and nonprofit — with a nonprofit emphasis.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Nonprofit & Community Events</h3>
+          <p>Fundraisers, galas, donor receptions, community programs — mission-forward and guest-first.</p>
+        </div>
+        <div class="card">
+          <h3>Day-of Coordination</h3>
+          <p>I run the timeline, manage vendors/volunteers, and handle the “uh-ohs” so your team can focus on people.</p>
+        </div>
+        <div class="card">
+          <h3>Partial Planning</h3>
+          <p>You’ve started. I step in to tighten the plan, align the moving parts, and build a calm, clear run-of-show.</p>
+        </div>
+
+        <div class="card">
+          <h3>Business Events</h3>
+          <p>Launches, appreciation events, meetings with personality — organized, polished, and on-brand.</p>
+        </div>
+        <div class="card">
+          <h3>Private Celebrations</h3>
+          <p>Weddings, birthdays, milestones — warm, personal, and beautifully coordinated.</p>
+        </div>
+        <div class="card">
+          <h3>Consulting & “Rescue Me” Sessions</h3>
+          <p>Need a timeline, vendor sanity-check, or help with the “small stuff” that’s eating your day? I’m your person.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <h2>About Davlin</h2>
+        <p>Organizer brain. People-first heart. Calm energy.</p>
+      </div>
+
+      <div class="two">
+        <div class="hcard">
+          <h3 style="margin:0 0 10px;">Hi — I’m Davlin.</h3>
+          <p style="margin:0; color:var(--muted);">
+            Social Butterfly Events exists because I genuinely love what happens when people feel welcomed, cared for, and connected.
+            My specialty is taking a pile of details (and a few curveballs) and turning them into a clear plan you can trust.
+            <br/><br/>
+            Nonprofits are my favorite lane — because when the event runs smoothly, the mission shines.
+          </p>
+
+          <!-- NEW: “off your plate this week” list -->
+          <div class="quote" style="margin-top:14px;">
+            <strong>What I can take off your plate this week:</strong>
+            <ul style="margin:10px 0 0; padding-left:18px; color:var(--muted);">
+              <li>Turn your notes into a clean timeline + run-of-show</li>
+              <li>Vendor emails, confirmations, and “who’s arriving when?”</li>
+              <li>Volunteer roles, schedules, and day-of instructions</li>
+              <li>Guest check-in flow, signage list, and “where do people go?”</li>
+              <li>Program cues (music, speakers, auction timing, transitions)</li>
+            </ul>
+          </div>
+
+          <div class="pillrow">
+            <div class="pill">Guest experience focus</div>
+            <div class="pill">Run-of-show mindset</div>
+            <div class="pill">Warm + professional</div>
+          </div>
+        </div>
+
+        <div class="hcard">
+          <h3 style="margin:0 0 10px;">What you can count on</h3>
+          <ul class="clean">
+            <li><strong>Clarity</strong> — timelines, checklists, and who’s doing what.</li>
+            <li><strong>Communication</strong> — vendors and volunteers aligned (without 200 emails).</li>
+            <li><strong>Calm leadership</strong> — I don’t add chaos; I remove it.</li>
+            <li><strong>Flexibility</strong> — small tasks, big tasks, whatever helps you breathe.</li>
+            <li><strong>Mission-first planning</strong> — especially for nonprofits and community orgs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="section-title">
+        <h2>How you can hire me</h2>
+        <p>No one-size-fits-all. You choose the level of support.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card" style="grid-column: span 6;">
+          <h3>1) Small-task support</h3>
+          <p>Need help with vendor emails, timelines, checklists, volunteer roles, signage lists, or a “please organize this” moment? Done.</p>
+        </div>
+        <div class="card" style="grid-column: span 6;">
+          <h3>2) Planning & coordination</h3>
+          <p>We build the plan, manage the moving parts, and keep momentum — from kickoff to final walk-through.</p>
+        </div>
+        <div class="card" style="grid-column: span 6;">
+          <h3>3) Event-day execution</h3>
+          <p>I run the show: setup flow, vendor arrivals, volunteer check-in, program cues, troubleshooting, and breakdown.</p>
+        </div>
+        <div class="card" style="grid-column: span 6;">
+          <h3>Not sure what you need?</h3>
+          <p>Tell me what’s happening and what’s stressing you out. I’ll recommend the simplest support that makes the biggest difference.</p>
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="hcard">
+          <h3 style="margin:0 0 10px;">Perfect for nonprofits</h3>
+          <ul class="clean">
+            <li><strong>Gala/dinner programs</strong> (speakers, awards, auctions)</li>
+            <li><strong>Donor + sponsor events</strong> (stewardship, VIP receptions)</li>
+            <li><strong>Community outreach</strong> (festivals, awareness events)</li>
+            <li><strong>Volunteer-driven events</strong> (roles, schedules, training)</li>
+          </ul>
+        </div>
+        <div class="hcard">
+          <h3 style="margin:0 0 10px;">The “Social Butterfly” difference</h3>
+          <div class="quote">
+            I’m not here to make your event “fancy.” I’m here to make it <strong>effective</strong>, <strong>beautiful</strong>,
+            and <strong>easy to be present for</strong> — with a little sparkle and a lot of structure.
+          </div>
+          <div class="mini">
+            <a class="btn primary" href="#contact">Reach out</a>
+            <a class="btn ghost" href="sms:+17248165268">Text Davlin</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="section-title">
+        <h2>Kind words</h2>
+        <p>Add real testimonials later — these are placeholders.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card" style="grid-column: span 6;">
+          <p style="margin:0; color:var(--muted);">
+            “Davlin brought calm to every detail. Our nonprofit event ran smoothly, volunteers were confident,
+            and donors stayed engaged.”
+          </p>
+          <p style="margin:10px 0 0; font-weight:800;">— Nonprofit Event Chair</p>
+        </div>
+        <div class="card" style="grid-column: span 6;">
+          <p style="margin:0; color:var(--muted);">
+            “It felt like having a professional stage manager for the day — cues were tight, people were cared for,
+            and nothing felt chaotic.”
+          </p>
+          <p style="margin:10px 0 0; font-weight:800;">— Private Client</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap" style="padding:0;">
+        <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+          <div>© <span id="year"></span> Social Butterfly Events • Athens, GA</div>
+          <div>
+            <a href="#services" style="text-decoration:none;">Services</a> ·
+            <a href="#about" style="text-decoration:none;">About</a> ·
+            <a href="#support" style="text-decoration:none;">Hire me</a> ·
+            <a href="#contact" style="text-decoration:none;">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const mobileCta = document.getElementById("mobileCta");
+    function toggleCta(){
+      if (window.innerWidth < 900) mobileCta.style.display = "inline-flex";
+      else mobileCta.style.display = "none";
+    }
+    window.addEventListener("resize", toggleCta);
+    toggleCta();
+
+    // Mailto form submit (reliable without third-party)
+    const form = document.getElementById("leadForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const type = document.getElementById("type").value.trim();
+      const date = document.getElementById("date").value.trim();
+      const location = document.getElementById("location").value.trim();
+      const guests = document.getElementById("guests").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const subject = encodeURIComponent("Social Butterfly Events Inquiry");
+      const bodyLines = [
+        "New Website Inquiry",
+        "-------------------",
+        `Name: ${name}`,
+        `Email: ${email}`,
+        phone ? `Phone: ${phone}` : "Phone: (not provided)",
+        `Event type: ${type || "(not selected)"}`,
+        date ? `Event date: ${date}` : "Event date: (not provided)",
+        location ? `Location: ${location}` : "Location: (not provided)",
+        guests ? `Guest count: ${guests}` : "Guest count: (not provided)",
+        "",
+        "Details:",
+        message || "(no additional details)"
+      ];
+
+      const body = encodeURIComponent(bodyLines.join("\n"));
+      window.location.href = `mailto:socialbutterflyevent26@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
